@@ -1,3 +1,3 @@
 # Aqueduct
 
-A low-latency multithreaded TCP/IP server built from scratch
+A simple multithreaded TCP/IP server built from scratch
