@@ -1,3 +1,5 @@
+// CLIENT IMPLEMENTATION
+
 #include <stdio.h>
 #include <sys/socket.h>
 #include <netdb.h>
@@ -61,7 +63,7 @@ int main (int argc, char** argv) {
 }
 
 
-// First handles server address and then makes a connection
+// first handles server address and then makes a connection
 int connectToServer(struct Client *client, char *argOne, char *argTwo) {
     client->address.sin_family = AF_INET;
     client->address.sin_port = htons(client->port);
@@ -73,8 +75,7 @@ int connectToServer(struct Client *client, char *argOne, char *argTwo) {
 	
     // make connection
     if ( connect(client->socket, (struct sockaddr *)&client->address, sizeof(client->address)) ) {
-		return -2;
-	}
+	return -2;
+    }
     return 0;
-
 }
