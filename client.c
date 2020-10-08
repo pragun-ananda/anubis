@@ -63,7 +63,7 @@ int main (int argc, char** argv) {
 }
 
 
-// first handles server address and then makes a connection
+// first handle server address and then make connection
 int connectToServer(struct Client *client, char *argOne, char *argTwo) {
     client->address.sin_family = AF_INET;
     client->address.sin_port = htons(client->port);
